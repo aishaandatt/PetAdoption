@@ -1,0 +1,81 @@
+.main {
+  .nav {
+    height: 8vh;
+    width: 96vw;
+    display: flex;
+    align-items: center;
+    img {
+      // margin-left: 2vw;
+    }
+    p {
+      margin: 0;
+      padding: 0;
+      margin-left: 1vw;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+  }
+  .page {
+    height: 92vh;
+    width: 96vw;
+    display: flex;
+    flex-direction: row;
+    .left {
+      flex: 50%;
+      // height: 100vh;
+      display: flex;
+      // width: 100%;
+      // background-color: red;
+      background-image: url(../../../public/assets/signin/pets_wall.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      // flex-grow: 1;
+    }
+    .right {
+      flex: 50%;
+      // flex-grow: 1;
+      display: flex;
+      // width: 100vmin;
+      justify-content: center;
+      flex-direction: column;
+      .btns-container {
+        display: flex;
+        justify-content: space-evenly;
+        .btns {
+          display: flex;
+          justify-content: space-between;
+          width: 25vw;
+          button {
+            font-size: 1.5rem;
+            font-weight: 500;
+            border: none;
+            background: none;
+            margin-right: 1vw;
+            margin-left: 1vw;
+            padding-bottom: 1vmin;
+            cursor: pointer;
+            // border-radius: 5px;
+          }
+          .btnActive {
+            border-bottom: 2px solid;
+            border-color: #ffbd59;
+          }
+          .btnNotActive {
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 850px) {
+  .main {
+    .nav {
+      img {
+        margin-top: 10px;
+      }
+    }
+    .page {
+      flex-direction: column-reverse;
+    }
+  }
+}
