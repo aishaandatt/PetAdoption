@@ -1,0 +1,12 @@
+const express = require('express')
+const { getAllUsers, deleteUser, deleteProduct, editProduct } = require('../controllers/adminController')
+const { authenticateToken, admin } = require('../middleware/authenticateToken')
+const { productFetch, addProduct } = require('../controllers/productController')
+const router = express.Router()
+router.get('/getall', authenticateToken, admin, getAllUsers)
+router.post("/add", authenticateToken, admin, addProduct)
+router.get("/fetch", productFetch)
+router.delete('/users/:id', authenticateToken, admin, deleteUser)
+router.delete('/products/:id', authenticateToken, admin, deleteProduct)
+router.put('/products/edit/:id', authenticateToken, admin, editProduct)
+module.exports = router;
