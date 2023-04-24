@@ -56,8 +56,15 @@ const LandingPage = (props) => {
                         {products.map((product) => (
                             <div className="pet" key={product._id}>
                                 <img src={`http://localhost:4000/uploads/${product.image}`} alt='' />
-                                <p className='name'>{product.name}</p>
-                                <p className='breed'>{product.breed}</p>
+                                <div className="info">
+                                    <div className="text">
+                                        <p className='name'>{product.name}</p>
+                                        <p className='breed'>{product.breed}</p>
+                                    </div>
+                                    <div className="btn">
+                                        <button>Fav</button>
+                                    </div>
+                                </div>
                             </div>
                             // <tr key={product._id}>
                             //     <td><img src={`http://localhost:4000/uploads/${product.image}`} style={{ width: '30%' }} /></td>
